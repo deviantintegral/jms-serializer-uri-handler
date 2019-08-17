@@ -1,0 +1,32 @@
+{
+    "name": "deviantintegral/jms-serializer-uri-handler",
+    "description": "A handler for serializing and deserializing PSR-7 URI objects",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Berry",
+            "email": "deviantintegral@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "jms/serializer": "^3.1",
+        "guzzlehttp/psr7": "^1.6"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "phpunit/phpunit": "^8.3",
+        "friendsofphp/php-cs-fixer": "^2.15"
+    },
+    "autoload": {
+        "psr-4": {
+            "Deviantintegral\\JmsSerializerUriHandler\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Deviantintegral\\JmsSerializerUriHandler\\Tests\\": "tests/src"
+        }
+    }
+}
