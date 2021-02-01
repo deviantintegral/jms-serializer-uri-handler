@@ -10,13 +10,13 @@
         }
     ],
     "require": {
-        "php": "^7.2",
+        "php": "^7.3||^8.0",
         "jms/serializer": "^3.1",
         "guzzlehttp/psr7": "^1.6"
     },
     "require-dev": {
         "ext-json": "*",
-        "phpunit/phpunit": "^8.3",
+        "phpunit/phpunit": "^9.5",
         "friendsofphp/php-cs-fixer": "^2.15"
     },
     "autoload": {
