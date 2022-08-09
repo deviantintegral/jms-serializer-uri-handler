@@ -85,6 +85,6 @@ class UriHandler implements SubscribingHandlerInterface
       array $type,
       DeserializationContext $context
     ): ?Uri {
-        return new Uri($data);
+        return new Uri((string) $data);
     }
 }
