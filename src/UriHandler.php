@@ -72,18 +72,18 @@ class UriHandler implements SubscribingHandlerInterface
     }
 
     public function serializeUriToString(
-      SerializationVisitorInterface $visitor,
-      UriInterface $data,
-      array $type
+        SerializationVisitorInterface $visitor,
+        UriInterface $data,
+        array $type
     ) {
         return $visitor->visitString((string) $data, $type);
     }
 
     public function deserializeStringToUri(
-      DeserializationVisitorInterface $visitor,
-      $data,
-      array $type,
-      DeserializationContext $context
+        DeserializationVisitorInterface $visitor,
+        $data,
+        array $type,
+        DeserializationContext $context
     ): ?Uri {
         return new Uri((string) $data);
     }
