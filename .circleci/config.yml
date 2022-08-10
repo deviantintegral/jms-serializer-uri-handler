@@ -147,7 +147,7 @@ jobs:
 
   build_php80:
     docker:
-      - image: php:8.0
+      - image: php:8.1
 
     working_directory: ~/repo
 
@@ -155,7 +155,7 @@ jobs:
 
   build_php74:
     docker:
-      - image: php:7.4
+      - image: php:8.1
 
     environment:
       - COMPOSER_FLAGS: --prefer-lowest
@@ -166,7 +166,7 @@ jobs:
 
   code_fixer:
     docker:
-      - image: php:8.0
+      - image: php:8.1
 
     working_directory: ~/repo
 
