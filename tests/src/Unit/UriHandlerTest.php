@@ -59,7 +59,7 @@ class UriHandlerTest extends TestCase
           $class,
           'json'
         );
-        $this->assertEquals($dummy, $deserialized);
+        $this->assertEquals((string) $dummy->getUri(), (string) $deserialized->getUri());
     }
 
     /**
@@ -89,7 +89,7 @@ XML;
           $class,
           'xml'
         );
-        $this->assertEquals($dummy, $deserialized);
+        $this->assertEquals((string) $dummy->getUri(), (string) $deserialized->getUri());
     }
 
     /**
