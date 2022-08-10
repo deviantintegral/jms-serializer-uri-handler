@@ -16,7 +16,6 @@ use Psr\Http\Message\UriInterface;
  */
 class UriHandlerTest extends TestCase
 {
-
     /**
      * @var \JMS\Serializer\SerializerInterface
      */
@@ -31,45 +30,41 @@ class UriHandlerTest extends TestCase
 
         $this->serializer = SerializerBuilder::create()
           ->configureHandlers(
-            function (HandlerRegistry $registry) {
-                $registry->registerSubscribingHandler(new UriHandler());
-            }
+              function (HandlerRegistry $registry) {
+                  $registry->registerSubscribingHandler(new UriHandler());
+              }
           )->build();
     }
 
     /**
      * @dataProvider typesToTest
-     *
-     * @param string $class
      */
     public function testSerializeJson(string $class)
     {
-        $uri = new Uri("http://www.example.com");
+        $uri = new Uri('http://www.example.com');
         $dummy = (new $class())->setUri($uri);
         $serialized = $this->serializer->serialize($dummy, 'json');
         $this->assertEquals(
-          [
-            'uri' => 'http://www.example.com',
-          ],
-          json_decode($serialized, true)
+            [
+              'uri' => 'http://www.example.com',
+            ],
+            json_decode($serialized, true)
         );
 
         $deserialized = $this->serializer->deserialize(
-          $serialized,
-          $class,
-          'json'
+            $serialized,
+            $class,
+            'json'
         );
         $this->assertEquals((string) $dummy->getUri(), (string) $deserialized->getUri());
     }
 
     /**
      * @dataProvider typesToTest
-     *
-     * @param string $class
      */
     public function testSerializeXml(string $class)
     {
-        $uri = new Uri("http://www.example.com");
+        $uri = new Uri('http://www.example.com');
         $dummy = (new $class())->setUri($uri);
         $serialized = $this->serializer->serialize($dummy, 'xml');
         $expected = <<<'XML'
@@ -80,14 +75,14 @@ class UriHandlerTest extends TestCase
 
 XML;
         $this->assertEquals(
-          $expected,
-          $serialized
+            $expected,
+            $serialized
         );
 
         $deserialized = $this->serializer->deserialize(
-          $serialized,
-          $class,
-          'xml'
+            $serialized,
+            $class,
+            'xml'
         );
         $this->assertEquals((string) $dummy->getUri(), (string) $deserialized->getUri());
     }
@@ -97,7 +92,8 @@ XML;
      *
      * @return array
      */
-    public function typesToTest() {
+    public function typesToTest()
+    {
         return [
           [UriDummy::class],
           [UriInterfaceDummy::class],
@@ -110,27 +106,21 @@ XML;
  */
 class UriDummy
 {
-
     /**
      * @var Uri
      * @Serializer\Type("GuzzleHttp\Psr7\Uri")
      */
     private $uri;
 
-    /**
-     * @return \GuzzleHttp\Psr7\Uri
-     */
-    public function getUri(): \GuzzleHttp\Psr7\Uri
+    public function getUri(): Uri
     {
         return $this->uri;
     }
 
     /**
-     * @param \GuzzleHttp\Psr7\Uri $uri
-     *
      * @return UriDummy
      */
-    public function setUri(\GuzzleHttp\Psr7\Uri $uri): self
+    public function setUri(Uri $uri): self
     {
         $this->uri = $uri;
 
@@ -143,24 +133,18 @@ class UriDummy
  */
 class UriInterfaceDummy
 {
-
     /**
      * @var \Psr\Http\Message\UriInterface
      * @Serializer\Type("Psr\Http\Message\UriInterface")
      */
     private $uri;
 
-    /**
-     * @return \Psr\Http\Message\UriInterface
-     */
     public function getUri(): UriInterface
     {
         return $this->uri;
     }
 
     /**
-     * @param \Psr\Http\Message\UriInterface $uri
-     *
      * @return \Deviantintegral\JmsSerializerUriHandler\Tests\Unit\UriInterfaceDummy
      */
     public function setUri(UriInterface $uri): self
