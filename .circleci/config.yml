@@ -134,7 +134,7 @@ code_fixer: &code_fixer
           key: v2-test-dependencies-{{ .Environment.CIRCLE_JOB }}-{{ checksum "composer.json" }}-{{ checksum ".circleci/config.yml" }}
 
       # run tests!
-      - run: vendor/bin/php-cs-fixer fix -v --dry-run --using-cache=no --path-mode=intersection
+      - run: vendor/bin/php-cs-fixer fix -v --dry-run --using-cache=no
 
 jobs:
   build_php81:
