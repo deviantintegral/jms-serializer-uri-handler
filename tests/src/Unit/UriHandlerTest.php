@@ -108,6 +108,7 @@ class UriDummy
 {
     /**
      * @var Uri
+     *
      * @Serializer\Type("GuzzleHttp\Psr7\Uri")
      */
     private $uri;
@@ -135,6 +136,7 @@ class UriInterfaceDummy
 {
     /**
      * @var \Psr\Http\Message\UriInterface
+     *
      * @Serializer\Type("Psr\Http\Message\UriInterface")
      */
     private $uri;
