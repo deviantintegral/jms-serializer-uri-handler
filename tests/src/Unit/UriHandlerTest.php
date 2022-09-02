@@ -118,9 +118,6 @@ class UriDummy
         return $this->uri;
     }
 
-    /**
-     * @return UriDummy
-     */
     public function setUri(Uri $uri): self
     {
         $this->uri = $uri;
