@@ -108,6 +108,7 @@ class UriDummy
 {
     /**
      * @var Uri
+     *
      * @Serializer\Type("GuzzleHttp\Psr7\Uri")
      */
     private $uri;
@@ -117,9 +118,6 @@ class UriDummy
         return $this->uri;
     }
 
-    /**
-     * @return UriDummy
-     */
     public function setUri(Uri $uri): self
     {
         $this->uri = $uri;
@@ -135,6 +133,7 @@ class UriInterfaceDummy
 {
     /**
      * @var \Psr\Http\Message\UriInterface
+     *
      * @Serializer\Type("Psr\Http\Message\UriInterface")
      */
     private $uri;
