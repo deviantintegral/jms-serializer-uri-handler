@@ -137,36 +137,34 @@ code_fixer: &code_fixer
       - run: vendor/bin/php-cs-fixer fix -v --dry-run --using-cache=no
 
 jobs:
+  build_php82:
+    docker:
+      - image: php:8.2
+
+    working_directory: ~/repo
+
+    <<: *test_and_cover
+
   build_php81:
     docker:
       - image: php:8.1
 
     working_directory: ~/repo
 
-    <<: *test_and_cover
-
+    <<: *test
   build_php80:
     docker:
       - image: php:8.0
 
     working_directory: ~/repo
-
-    <<: *test
-
-  build_php74:
-    docker:
-      - image: php:7.4
-
     environment:
       - COMPOSER_FLAGS: --prefer-lowest
-
-    working_directory: ~/repo
 
     <<: *test
 
   code_fixer:
     docker:
-      - image: php:8.0
+      - image: php:8.1
 
     working_directory: ~/repo
 
@@ -178,9 +176,9 @@ workflows:
   # Declare a workflow that runs all of our jobs in parallel.
   test_cover_workflow:
     jobs:
-      - build_php74
       - build_php80
       - build_php81
+      - build_php82
       - code_fixer
 
   nightly:
@@ -193,7 +191,7 @@ workflows:
               only:
                 - master
     jobs:
-      - build_php74
       - build_php80
       - build_php81
+      - build_php82
       - code_fixer

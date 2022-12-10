@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "php": "^7.4||^8.0",
+        "php": "^8.0",
         "jms/serializer": "^3.1",
         "guzzlehttp/psr7": "^2.0"
     },
