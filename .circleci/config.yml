@@ -176,9 +176,9 @@ workflows:
   # Declare a workflow that runs all of our jobs in parallel.
   test_cover_workflow:
     jobs:
-      - build_php74
       - build_php80
       - build_php81
+      - build_php82
       - code_fixer
 
   nightly:
@@ -191,7 +191,7 @@ workflows:
               only:
                 - master
     jobs:
-      - build_php74
       - build_php80
       - build_php81
+      - build_php82
       - code_fixer
