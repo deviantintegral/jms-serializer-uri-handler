@@ -17,7 +17,7 @@
     "require-dev": {
         "ext-json": "*",
         "phpunit/phpunit": "9.5.27",
-        "friendsofphp/php-cs-fixer": "3.13.1"
+        "friendsofphp/php-cs-fixer": "3.13.2"
     },
     "autoload": {
         "psr-4": {
