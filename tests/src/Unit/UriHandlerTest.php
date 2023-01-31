@@ -3,7 +3,6 @@
 namespace Deviantintegral\JmsSerializerUriHandler\Tests\Unit;
 
 use Deviantintegral\JmsSerializerUriHandler\UriHandler;
-use Doctrine\Common\Annotations\AnnotationRegistry;
 use GuzzleHttp\Psr7\Uri;
 use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Handler\HandlerRegistry;
@@ -26,8 +25,6 @@ class UriHandlerTest extends TestCase
      */
     protected function setUp(): void
     {
-        AnnotationRegistry::registerLoader('class_exists');
-
         $this->serializer = SerializerBuilder::create()
           ->configureHandlers(
               function (HandlerRegistry $registry) {
