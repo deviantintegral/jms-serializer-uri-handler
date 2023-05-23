@@ -20,9 +20,6 @@ class UriHandlerTest extends TestCase
      */
     private $serializer;
 
-    /**
-     * {@inheritdoc}
-     */
     protected function setUp(): void
     {
         $this->serializer = SerializerBuilder::create()
