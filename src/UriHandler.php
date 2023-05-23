@@ -14,9 +14,6 @@ use Psr\Http\Message\UriInterface;
 
 class UriHandler implements SubscribingHandlerInterface
 {
-    /**
-     * {@inheritdoc}
-     */
     public static function getSubscribingMethods()
     {
         return [
