@@ -147,14 +147,14 @@ jobs:
 
   build_php81:
     docker:
-      - image: php:8.1
+      - image: php:8.2
 
     working_directory: ~/repo
 
     <<: *test
   build_php80:
     docker:
-      - image: php:8.0
+      - image: php:8.2
 
     working_directory: ~/repo
     environment:
@@ -164,7 +164,7 @@ jobs:
 
   code_fixer:
     docker:
-      - image: php:8.1
+      - image: php:8.2
 
     working_directory: ~/repo
 
