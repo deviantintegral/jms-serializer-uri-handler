@@ -17,7 +17,7 @@
     "require-dev": {
         "ext-json": "*",
         "phpunit/phpunit": "9.6.10",
-        "friendsofphp/php-cs-fixer": "3.21.2",
+        "friendsofphp/php-cs-fixer": "3.21.3",
         "doctrine/annotations": "^2.0.0"
     },
     "autoload": {
