@@ -137,9 +137,6 @@ class UriInterfaceDummy
         return $this->uri;
     }
 
-    /**
-     * @return \Deviantintegral\JmsSerializerUriHandler\Tests\Unit\UriInterfaceDummy
-     */
     public function setUri(UriInterface $uri): self
     {
         $this->uri = $uri;
