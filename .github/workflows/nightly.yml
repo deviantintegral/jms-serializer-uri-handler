@@ -49,7 +49,7 @@ jobs:
         run: mkdir -p build/logs
 
       - name: Run tests
-        run: vendor/bin/phpunit --testsuite Unit
+        run: vendor/bin/phpunit
 
       - name: Upload test results
         if: always()
