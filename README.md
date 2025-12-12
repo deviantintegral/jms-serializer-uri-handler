@@ -1,6 +1,6 @@
 # URI Handler for JMS Serializer
 
-[![CircleCI](https://circleci.com/gh/deviantintegral/jms-serializer-uri-handler.svg?style=svg)](https://circleci.com/gh/deviantintegral/jms-serializer-uri-handler)
+[![CI](https://github.com/deviantintegral/jms-serializer-uri-handler/actions/workflows/ci.yml/badge.svg)](https://github.com/deviantintegral/jms-serializer-uri-handler/actions/workflows/ci.yml)
 
 This library supports serializing and deserializing URI instances, as defined
 by [PSR-7](https://www.php-fig.org/psr/psr-7/#35-psrhttpmessageuriinterface).
