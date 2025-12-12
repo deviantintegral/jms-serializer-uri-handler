@@ -17,61 +17,61 @@ class UriHandler implements SubscribingHandlerInterface
     public static function getSubscribingMethods()
     {
         return [
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
-            'format' => 'json',
-            'type' => 'GuzzleHttp\Psr7\Uri',
-            'method' => 'serializeUriToString',
-          ],
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
-            'format' => 'json',
-            'type' => 'Psr\Http\Message\UriInterface',
-            'method' => 'serializeUriToString',
-          ],
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
-            'format' => 'json',
-            'type' => 'GuzzleHttp\Psr7\Uri',
-            'method' => 'deserializeStringToUri',
-          ],
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
-            'format' => 'json',
-            'type' => 'Psr\Http\Message\UriInterface',
-            'method' => 'deserializeStringToUri',
-          ],
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
-            'format' => 'xml',
-            'type' => 'GuzzleHttp\Psr7\Uri',
-            'method' => 'serializeUriToString',
-          ],
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
-            'format' => 'xml',
-            'type' => 'Psr\Http\Message\UriInterface',
-            'method' => 'serializeUriToString',
-          ],
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
-            'format' => 'xml',
-            'type' => 'GuzzleHttp\Psr7\Uri',
-            'method' => 'deserializeStringToUri',
-          ],
-          [
-            'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
-            'format' => 'xml',
-            'type' => 'Psr\Http\Message\UriInterface',
-            'method' => 'deserializeStringToUri',
-          ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
+                'format' => 'json',
+                'type' => 'GuzzleHttp\Psr7\Uri',
+                'method' => 'serializeUriToString',
+            ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
+                'format' => 'json',
+                'type' => 'Psr\Http\Message\UriInterface',
+                'method' => 'serializeUriToString',
+            ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
+                'format' => 'json',
+                'type' => 'GuzzleHttp\Psr7\Uri',
+                'method' => 'deserializeStringToUri',
+            ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
+                'format' => 'json',
+                'type' => 'Psr\Http\Message\UriInterface',
+                'method' => 'deserializeStringToUri',
+            ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
+                'format' => 'xml',
+                'type' => 'GuzzleHttp\Psr7\Uri',
+                'method' => 'serializeUriToString',
+            ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_SERIALIZATION,
+                'format' => 'xml',
+                'type' => 'Psr\Http\Message\UriInterface',
+                'method' => 'serializeUriToString',
+            ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
+                'format' => 'xml',
+                'type' => 'GuzzleHttp\Psr7\Uri',
+                'method' => 'deserializeStringToUri',
+            ],
+            [
+                'direction' => GraphNavigatorInterface::DIRECTION_DESERIALIZATION,
+                'format' => 'xml',
+                'type' => 'Psr\Http\Message\UriInterface',
+                'method' => 'deserializeStringToUri',
+            ],
         ];
     }
 
     public function serializeUriToString(
         SerializationVisitorInterface $visitor,
         UriInterface $data,
-        array $type
+        array $type,
     ) {
         return $visitor->visitString((string) $data, $type);
     }
@@ -80,7 +80,7 @@ class UriHandler implements SubscribingHandlerInterface
         DeserializationVisitorInterface $visitor,
         $data,
         array $type,
-        DeserializationContext $context
+        DeserializationContext $context,
     ): ?Uri {
         return new Uri((string) $data);
     }

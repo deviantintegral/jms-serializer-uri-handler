@@ -40,7 +40,7 @@ class UriHandlerTest extends TestCase
         $serialized = $this->serializer->serialize($dummy, 'json');
         $this->assertEquals(
             [
-              'uri' => 'http://www.example.com',
+                'uri' => 'http://www.example.com',
             ],
             json_decode($serialized, true)
         );
@@ -89,8 +89,8 @@ XML;
     public function typesToTest()
     {
         return [
-          [UriDummy::class],
-          [UriInterfaceDummy::class],
+            [UriDummy::class],
+            [UriInterfaceDummy::class],
         ];
     }
 }
@@ -126,7 +126,7 @@ class UriDummy
 class UriInterfaceDummy
 {
     /**
-     * @var \Psr\Http\Message\UriInterface
+     * @var UriInterface
      *
      * @Serializer\Type("Psr\Http\Message\UriInterface")
      */
