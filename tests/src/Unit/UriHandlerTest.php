@@ -7,6 +7,7 @@ use GuzzleHttp\Psr7\Uri;
 use JMS\Serializer\Annotation as Serializer;
 use JMS\Serializer\Handler\HandlerRegistry;
 use JMS\Serializer\SerializerBuilder;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Message\UriInterface;
 
@@ -30,9 +31,7 @@ class UriHandlerTest extends TestCase
           )->build();
     }
 
-    /**
-     * @dataProvider typesToTest
-     */
+    #[DataProvider('typesToTest')]
     public function testSerializeJson(string $class)
     {
         $uri = new Uri('http://www.example.com');
@@ -53,9 +52,7 @@ class UriHandlerTest extends TestCase
         $this->assertEquals((string) $dummy->getUri(), (string) $deserialized->getUri());
     }
 
-    /**
-     * @dataProvider typesToTest
-     */
+    #[DataProvider('typesToTest')]
     public function testSerializeXml(string $class)
     {
         $uri = new Uri('http://www.example.com');
@@ -83,10 +80,8 @@ XML;
 
     /**
      * Data provider with the classes to test.
-     *
-     * @return array
      */
-    public function typesToTest()
+    public static function typesToTest(): array
     {
         return [
             [UriDummy::class],
