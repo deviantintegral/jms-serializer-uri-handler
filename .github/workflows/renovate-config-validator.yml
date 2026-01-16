@@ -4,29 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'renovate.json'
-      - 'renovate.json5'
-      - '.renovaterc'
-      - '.renovaterc.json'
-      - '.renovaterc.json5'
-      - '.github/renovate.json'
-      - '.github/renovate.json5'
-      - '.github/.renovaterc'
-      - '.github/.renovaterc.json'
-      - '.github/.renovaterc.json5'
   pull_request:
-    paths:
-      - 'renovate.json'
-      - 'renovate.json5'
-      - '.renovaterc'
-      - '.renovaterc.json'
-      - '.renovaterc.json5'
-      - '.github/renovate.json'
-      - '.github/renovate.json5'
-      - '.github/.renovaterc'
-      - '.github/.renovaterc.json'
-      - '.github/.renovaterc.json5'
 
 permissions:
   contents: read
