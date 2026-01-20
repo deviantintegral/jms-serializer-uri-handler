@@ -5,6 +5,8 @@
     "helpers:pinGitHubActionDigests"
   ],
   "minimumReleaseAge": "3 days",
+  "prCreation": "not-pending",
+  "internalChecksFilter": "strict",
   "customManagers": [
     {
       "customType": "regex",
