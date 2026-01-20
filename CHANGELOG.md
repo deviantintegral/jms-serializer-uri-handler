@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.3](https://github.com/deviantintegral/jms-serializer-uri-handler/compare/v1.2.2...v1.2.3) (2026-01-20)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency friendsofphp/php-cs-fixer to v3.92.4 ([#215](https://github.com/deviantintegral/jms-serializer-uri-handler/issues/215)) ([758f8a3](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/758f8a35656bc3f88267ba3ad7496cc1d639fb5e))
+* **deps:** update dependency friendsofphp/php-cs-fixer to v3.92.5 ([#218](https://github.com/deviantintegral/jms-serializer-uri-handler/issues/218)) ([21b3395](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/21b3395062f2fe9f61e797a334ab1247f029b7b5))
+* **deps:** update dependency rhysd/actionlint to v1.7.10 ([#224](https://github.com/deviantintegral/jms-serializer-uri-handler/issues/224)) ([4b9d428](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/4b9d42827c3d1bb57b4daf7d1909f34427980443))
+* **deps:** update suzuki-shunsuke/github-action-renovate-config-validator action to v2 ([#219](https://github.com/deviantintegral/jms-serializer-uri-handler/issues/219)) ([8992bd6](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/8992bd61490da464d3bbc5ec72a44df447308d6d))
+* **renovate:** add PR creation filters for minimumReleaseAge ([4c4f66f](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/4c4f66fcba385f5bb382b195ad7c6e11f957f002))
+* **renovate:** automerge all PRs after 3 days ([#220](https://github.com/deviantintegral/jms-serializer-uri-handler/issues/220)) ([9f2f20a](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/9f2f20a30e23fa48236ce106526971098970ebba))
+
 ## [1.2.2](https://github.com/deviantintegral/jms-serializer-uri-handler/compare/v1.2.1...v1.2.2) (2025-12-18)
 
 
