@@ -96,10 +96,11 @@ XML;
 class UriDummy
 {
     /**
-     * @var Uri
+     * Deliberately untyped so the type comes only from the attribute below.
      *
-     * @Serializer\Type("GuzzleHttp\Psr7\Uri")
+     * @var Uri
      */
+    #[Serializer\Type(Uri::class)]
     private $uri;
 
     public function getUri(): Uri
@@ -121,10 +122,11 @@ class UriDummy
 class UriInterfaceDummy
 {
     /**
-     * @var UriInterface
+     * Deliberately untyped so the type comes only from the attribute below.
      *
-     * @Serializer\Type("Psr\Http\Message\UriInterface")
+     * @var UriInterface
      */
+    #[Serializer\Type(UriInterface::class)]
     private $uri;
 
     public function getUri(): UriInterface
