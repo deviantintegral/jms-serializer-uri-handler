@@ -5,8 +5,8 @@
     "helpers:pinGitHubActionDigests"
   ],
   "minimumReleaseAge": "3 days",
-  "prCreation": "not-pending",
   "internalChecksFilter": "strict",
+  "automerge": true,
   "customManagers": [
     {
       "customType": "regex",
@@ -23,12 +23,11 @@
   ],
   "packageRules": [
     {
+      "description": "Never automerge a bare hash bump. Actions are pinned to an exact release tag, so a digest-only update means that tag was moved to point at different code - that needs a human to look at it.",
       "matchUpdateTypes": [
-        "minor",
-        "patch",
-        "major"
+        "digest"
       ],
-      "automerge": true
+      "automerge": false
     },
     {
       "matchCurrentVersion": "8.0",
