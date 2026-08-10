@@ -25,14 +25,14 @@ class UriHandlerTest extends TestCase
     {
         $this->serializer = SerializerBuilder::create()
           ->configureHandlers(
-              function (HandlerRegistry $registry) {
+              static function (HandlerRegistry $registry) {
                   $registry->registerSubscribingHandler(new UriHandler());
               }
           )->build();
     }
 
     #[DataProvider('typesToTest')]
-    public function testSerializeJson(string $class)
+    public function testSerializeJson(string $class): void
     {
         $uri = new Uri('http://www.example.com');
         $dummy = (new $class())->setUri($uri);
@@ -53,7 +53,7 @@ class UriHandlerTest extends TestCase
     }
 
     #[DataProvider('typesToTest')]
-    public function testSerializeXml(string $class)
+    public function testSerializeXml(string $class): void
     {
         $uri = new Uri('http://www.example.com');
         $dummy = (new $class())->setUri($uri);

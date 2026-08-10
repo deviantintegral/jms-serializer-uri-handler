@@ -2,11 +2,14 @@
 
 return (new PhpCsFixer\Config())
     ->setRules([
-        '@PHP71Migration' => true,
-        '@PHPUnit75Migration:risky' => true,
+        '@PHP7x1Migration' => true,
+        '@PHPUnit7x5Migration:risky' => true,
         '@Symfony' => true,
         '@Symfony:risky' => true,
         'protected_to_private' => false,
+        // @Symfony:risky sets this to 'remove', which would strip the existing
+        // declare(strict_types=1). Disable it so declarations are left as-is.
+        'declare_strict_types' => false,
         'native_constant_invocation' => ['strict' => false],
         'nullable_type_declaration_for_default_null_value' => ['use_nullable_type_declaration' => false],
         'modernize_strpos' => true,
