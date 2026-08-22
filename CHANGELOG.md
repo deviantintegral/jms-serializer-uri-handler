@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.1](https://github.com/deviantintegral/jms-serializer-uri-handler/compare/v1.3.0...v1.3.1) (2026-08-22)
+
+
+### Miscellaneous Chores
+
+* **deps:** update dependency friendsofphp/php-cs-fixer to v3.95.19 ([#241](https://github.com/deviantintegral/jms-serializer-uri-handler/issues/241)) ([b0a5348](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/b0a53487c508a5464f293b66e2f469f4bcb5de8b))
+* **deps:** update dependency friendsofphp/php-cs-fixer to v3.95.20 ([#243](https://github.com/deviantintegral/jms-serializer-uri-handler/issues/243)) ([4bbdabe](https://github.com/deviantintegral/jms-serializer-uri-handler/commit/4bbdabe35ba465c7ddf648c48e6422f953e607d9))
+
 ## [1.3.0](https://github.com/deviantintegral/jms-serializer-uri-handler/compare/v1.2.2...v1.3.0) (2026-08-10)
 
 
