@@ -9,7 +9,7 @@ permissions:
 jobs:
   tests:
     name: Tests (PHP ${{ matrix.php }})
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
 
     strategy:
       fail-fast: false
@@ -58,7 +58,7 @@ jobs:
 
   code-style:
     name: Code Style
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
 
     steps:
       - name: Checkout code
