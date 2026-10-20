@@ -1,0 +1,5 @@
+# Until https://github.com/rhysd/actionlint/pull/743 is fixed.
+paths:
+  .github/workflows/*.{yml,yaml}:
+    ignore:
+      - label "ubuntu-26.04" is unknown
